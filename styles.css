@@ -1,0 +1,131 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  text-align: center;
+}
+
+header nav a {
+  color: #FFD700;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.2em;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content Area */
+main {
+  width: 60%;
+  margin: 50px auto;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 30px;
+  border-radius: 15px;
+  color: #fff;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Headings */
+h1, h2 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #FFD700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 2em;
+  margin-top: 30px;
+}
+
+/* Links inside main content */
+main a {
+  color: #FFD700;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: block;
+  margin: 10px 0;
+}
+
+main a:hover {
+  text-decoration: underline;
+}
+
+/* Styles for Resume and Biodata */
+.resume, .biodata {
+  font-size: 1.3em;
+  line-height: 1.8em;
+}
+
+.resume ul, .biodata ul {
+  list-style: none;
+  padding: 0;
+}
+
+.resume ul li, .biodata ul li {
+  margin: 10px 0;
+}
+
+/* Specific Page Backgrounds */
+body.vehicle-registration {
+  background: url('car.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.general {
+  background: url('bg.png') no-repeat center center fixed;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: overlay;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  font-weight: bold;
+  background: linear-gradient(90deg, #FFD700, #FF8C00);
+  border: none;
+  color: #000;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #FF8C00, #FFD700);
+  box-shadow: 0px 6px 15px rgba(255, 215, 0, 0.6);
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+      width: 90%;
+      padding: 20px;
+  }
+
+  h1, h2 {
+      font-size: 2em;
+  }
+
+  .resume, .biodata {
+      font-size: 1.1em;
+  }
+}
+
+#explore{
+  text-align: center;
+
+}
