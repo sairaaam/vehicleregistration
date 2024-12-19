@@ -3,12 +3,18 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
+  color: #fff;
+  background: url('bg.png') no-repeat center center fixed;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: overlay;
 }
 
 header {
   background: rgba(0, 0, 0, 0.8);
   padding: 20px;
   text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 header nav a {
@@ -16,6 +22,7 @@ header nav a {
   text-decoration: none;
   margin: 0 15px;
   font-size: 1.2em;
+  font-weight: bold;
 }
 
 header nav a:hover {
@@ -24,7 +31,7 @@ header nav a:hover {
 
 /* Main Content Area */
 main {
-  width: 60%;
+  width: 70%;
   margin: 50px auto;
   background: rgba(0, 0, 0, 0.85);
   padding: 30px;
@@ -33,27 +40,84 @@ main {
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Headings */
-h1, h2 {
-  text-align: center;
-  font-size: 2.5em;
-  margin-bottom: 20px;
+main h1 {
+  font-size: 2.2em;
   color: #FFD700;
+  margin-bottom: 15px;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
-h2 {
-  font-size: 2em;
+main h2 {
+  font-size: 1.8em;
+  color: #FFD700;
   margin-top: 30px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* Links inside main content */
+main p, main ul {
+  font-size: 1.2em;
+  line-height: 1.8em;
+  margin: 15px 0;
+  color: #e6e6e6;
+}
+
+/* Profile Picture */
+.profile-picture {
+  display: inline-flexbox;
+  justify-content: end;
+  text-align: end;
+}
+
+.profile-picture img {
+  border-radius: 50%;
+  width: 180px;
+  height: 170px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+  border: 3px solid #FFD700;
+
+}
+
+/* Lists */
+.resume h1{
+  margin-top: -135px ;
+  text-align: start;
+}
+
+.resume h2,.biodata h2{
+  font-size: 1.8em;
+  text-align: start;
+  border-bottom: #FFD700 solid 1pt;
+}
+
+.resume p,.biodata p{
+  text-align: start;
+}
+.resume ul, .biodata ul {
+  text-align: start;
+  list-style-type: none;
+  padding: 0;
+}
+
+.resume ul li, .biodata ul li {
+  margin-bottom: 15px;
+  /* border-bottom: 1px solid #FFD700; */
+  padding-bottom: 10px;
+}
+
+.resume ul li strong, .biodata ul li strong {
+  color: #FFD700;
+}
+
+/* Links */
 main a {
   color: #FFD700;
   text-decoration: none;
   font-size: 1.2em;
-  display: block;
+  font-weight: bold;
+  display: inline-block;
   margin: 10px 0;
 }
 
@@ -61,71 +125,62 @@ main a:hover {
   text-decoration: underline;
 }
 
-/* Styles for Resume and Biodata */
+/* Specific Page Styles */
 .resume, .biodata {
-  font-size: 1.3em;
-  line-height: 1.8em;
+  text-align: center;
 }
 
-.resume ul, .biodata ul {
-  list-style: none;
-  padding: 0;
+/* Project Gallery */
+.project-gallery {
+  display: flex;
+  gap: 15px;
+  justify-content: left;
 }
 
-.resume ul li, .biodata ul li {
-  margin: 10px 0;
+.project-gallery img {
+ 
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Specific Page Backgrounds */
-body.vehicle-registration {
-  background: url('car.jpg') no-repeat center center fixed;
-  background-size: cover;
-}
-
-body.general {
-  background: url('bg.png') no-repeat center center fixed;
-  background-size: cover;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-blend-mode: overlay;
-}
-
-/* Buttons */
-button {
-  cursor: pointer;
-  font-weight: bold;
-  background: linear-gradient(90deg, #FFD700, #FF8C00);
-  border: none;
-  color: #000;
-  padding: 10px 20px;
-  font-size: 1.2em;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-}
-
-button:hover {
-  background: linear-gradient(90deg, #FF8C00, #FFD700);
-  box-shadow: 0px 6px 15px rgba(255, 215, 0, 0.6);
+.project-gallery img:hover {
   transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Video Container */
+.video-container {
+  text-align: start;
+  margin: 10px;
+}
+
+.video-container video {
+  width: 450px;
+  height: 450px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.6);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   main {
-      width: 90%;
-      padding: 20px;
+    width: 90%;
+    padding: 20px;
   }
 
   h1, h2 {
-      font-size: 2em;
+    font-size: 2em;
   }
 
-  .resume, .biodata {
-      font-size: 1.1em;
+  .profile-picture img {
+    width: 120px;
+    height: 120px;
   }
-}
 
-#explore{
-  text-align: center;
-
+  .resume ul li, .biodata ul li {
+    font-size: 1em;
+  }
 }
