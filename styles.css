@@ -29,6 +29,20 @@ header nav a:hover {
   text-decoration: underline;
 }
 
+.vehicle-registration{
+  background: url('car.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: overlay;
+}
+
+.vehicle-registration h1{
+  border-bottom: #FFD700 solid 1pt;
+}
+
+.vehicle-registration h2{
+  text-decoration: underline;
+}
 /* Main Content Area */
 main {
   width: 70%;
